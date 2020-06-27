@@ -1,0 +1,37 @@
+.chat-main
+  .chat-info
+    .chat-info__group
+      test
+      .chat-info__group__list
+        .chat-info__group__list-menber
+          Member:
+        .chat-info__group__list-name
+          masa
+    .chat__editbutton
+      = link_to "#", class:"content-button" do
+        Edit
+  .message-list
+    .message-list__message
+      .chat-message
+        .chat-message__name
+          masa
+        .chat-message__daytime
+          2019/11/20(Wed)17:43:01
+      .greeting
+        おはよう！
+    .chat-message2  
+      .chat-message2__box
+        .chat-message2__box__name2
+          masa
+        .chat-message2__box__daytime2
+          2019/11/20(Wed)17:43:34
+      .greeting2
+        今日は夜から雨
+  .Footer
+    %form.Form
+      .Form__contents
+        %input.Form__contents__inputContent{placeholder:"type a message", type:"text"}
+        %label.Form__contents__inputImage{for:"message_image"}
+          = icon('fas','image')
+          %input.Hidden{type:"file", name:"message[image]", id:"message_image"}
+      %input.Form__submit{type:"submit", value:"Send"}
