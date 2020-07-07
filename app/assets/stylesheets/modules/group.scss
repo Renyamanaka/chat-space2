@@ -71,7 +71,6 @@ li {
     text-align: center;
   }
 }
-
 .ChatMember {
   padding: 0 15px;
   line-height: 50px;
@@ -85,6 +84,21 @@ li {
   }
   &__add {
     color: #38aef0;
+  }
+  &__remove {
+    color: #f05050;
+  }
+}
+.ChatMembers {
+  padding: 0 15px;
+  line-height: 50px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  &__button {
+    display: inline-block;
+    cursor: pointer;
   }
   &__remove {
     color: #f05050;

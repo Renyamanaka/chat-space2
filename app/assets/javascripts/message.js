@@ -1,4 +1,8 @@
 $(function(){
+  $('.SettingGroupForm__rightField').on('keyup', function(e){
+    e.preventDefault()
+    console.log("test")
+  });
   function buildHTML(message){
     if ( message.image ) {
       let html =
