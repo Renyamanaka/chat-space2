@@ -2,7 +2,7 @@
 lock "~> 3.14.1"
 
 set :application, "chat-space"
-set :repo_url, "git@github.com:Renyamanaka/chat-space.git"
+set :repo_url, "git@github.com:Renyamanaka/chat-space2.git"
 
 # バージョンが変わっても共通で参照するディレクトリを指定
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
@@ -12,7 +12,7 @@ set :rbenv_ruby, '2.6.5' #カリキュラム通りに進めた場合、2.6.5で�
 
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['~/.ssh/chat-space2.pem'] 
+                  keys: ['~/.ssh/chat-space.pem'] 
 
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
@@ -28,3 +28,14 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 end
+
+
+
+input = gets.to_i
+
+if input <== 0
+  puts "0以下の数字です"
+elsif input <== 10
+  puts "10以下の数字です"
+else
+  puts "10より大きい数字です"
