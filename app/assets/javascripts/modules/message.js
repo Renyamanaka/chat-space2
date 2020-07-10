@@ -1,8 +1,4 @@
 $(function(){
-  // $('.SettingGroupForm__rightField').on('keyup', function(e){
-  //   e.preventDefault()
-  //   console.log("test")
-  // });
   function buildHTML(message){
     if ( message.image ) {
       let html =
@@ -58,14 +54,14 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.message-list').append(html);      
-      $('.Form__submit').prop('disabled', false);
+      $('.message-list').append(html);
       $('Form')[0].reset();
       $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
+      $('.Form__submit').prop('disabled', false);
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
-      $('.Form__submit').prop("disabled", false)
-  });
+      $('.Form__submit').prop("disabled", false);
+    });
   });
 });

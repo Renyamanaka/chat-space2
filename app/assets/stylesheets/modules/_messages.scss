@@ -35,6 +35,7 @@
   .group-list{
     background-color:#2f3e51;
     height: calc(100vh - 100px);
+    overflow: scroll;
     .group-box{
       padding:20px 20px 40px 20px;
       &__name{
@@ -45,6 +46,9 @@
         color:#ffffff;
         font-size:11px;
         margin-top:5px;
+      }
+      a {
+        text-decoration: none;
       }
     }
   }

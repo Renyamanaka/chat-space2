@@ -90,12 +90,6 @@ li {
   }
 }
 .ChatMembers {
-  padding: 0 15px;
-  line-height: 50px;
-  font-size: 14px;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  justify-content: space-between;
   &__button {
     display: inline-block;
     cursor: pointer;
