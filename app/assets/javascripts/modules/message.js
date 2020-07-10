@@ -1,8 +1,8 @@
 $(function(){
-  $('.SettingGroupForm__rightField').on('keyup', function(e){
-    e.preventDefault()
-    console.log("test")
-  });
+  // $('.SettingGroupForm__rightField').on('keyup', function(e){
+  //   e.preventDefault()
+  //   console.log("test")
+  // });
   function buildHTML(message){
     if ( message.image ) {
       let html =
@@ -60,11 +60,12 @@ $(function(){
       let html = buildHTML(data);
       $('.message-list').append(html);      
       $('.Form__submit').prop('disabled', false);
-      $('form')[0].reset();
+      $('Form')[0].reset();
       $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+      $('.Form__submit').prop("disabled", false)
   });
   });
 });
